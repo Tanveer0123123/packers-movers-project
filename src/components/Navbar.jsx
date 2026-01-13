@@ -1,9 +1,18 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Logo-img2.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
+
+  const navLinkClass = ({ isActive }) =>
+    `cursor-pointer hover:text-purple-700 transition ${
+      isActive ? "text-purple-700 font-semibold" : "text-gray-700"
+    }`;
 
   return (
     <>
@@ -29,53 +38,156 @@ const Navbar = () => {
       <nav className="bg-white shadow-md px-4 py-4 sticky top-0 z-50">
         <div className="flex justify-between items-center">
           {/* LOGO */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Company Logo" className="w-12 h-12" />
             <span className="text-lg md:text-xl font-bold text-gray-800">
               Now & Fast Transportation
             </span>
-          </div>
+          </Link>
 
           {/* DESKTOP MENU */}
-          <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700">
-            <li className="hover:text-purple-700 cursor-pointer">Home</li>
-            <li className="hover:text-purple-700 cursor-pointer">About</li>
-            <li className="hover:text-purple-700 cursor-pointer">Services</li>
-            <li className="hover:text-purple-700 cursor-pointer">Gallery</li>
-            <li className="hover:text-purple-700 cursor-pointer">Contact Us</li>
+          <ul className="hidden md:flex items-center gap-8 font-medium">
             <li>
-              <button className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600">
-                Enquiry
-              </button>
+              <NavLink to="/" className={navLinkClass}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className={navLinkClass}>
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/services" className={navLinkClass}>
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/gallery" className={navLinkClass}>
+                Gallery
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={navLinkClass}>
+                Contact Us
+              </NavLink>
+            </li>
+
+            {/* Better CTA button */}
+            <li>
+              <Link
+                to="/enquiry"
+                className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600 transition"
+              >
+                Get Quote
+              </Link>
             </li>
           </ul>
 
           {/* MOBILE MENU BUTTON */}
           <button
             className="md:hidden text-2xl text-gray-700"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen(true)}
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            <FaBars />
           </button>
         </div>
 
-        {/* MOBILE MENU */}
-        {menuOpen && (
-          <div className="md:hidden mt-4 bg-white shadow-lg rounded-lg">
-            <ul className="flex flex-col gap-4 p-4 font-medium text-gray-700">
-              <li className="hover:text-purple-700 cursor-pointer">Home</li>
-              <li className="hover:text-purple-700 cursor-pointer">About</li>
-              <li className="hover:text-purple-700 cursor-pointer">Services</li>
-              <li className="hover:text-purple-700 cursor-pointer">Gallery</li>
-              <li className="hover:text-purple-700 cursor-pointer">Contact Us</li>
+        {/* Overlay */}
+        <div
+          className={`fixed inset-0 z-50 transition-all duration-300 ${
+            menuOpen ? "visible" : "invisible"
+          }`}
+        >
+          {/* background overlay */}
+          <div
+            className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+              menuOpen ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={closeMenu}
+          />
+
+          {/* Drawer */}
+          <div
+            className={`absolute left-0 top-0 h-full w-[75%] max-w-[320px] bg-white shadow-xl transition-transform duration-300 ${
+              menuOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            {/* Drawer Header */}
+            <div className="flex justify-between items-center p-4 border-b">
+              <div className="flex items-center gap-2">
+                <img src={logo} alt="logo" className="w-10 h-10" />
+                <span className="font-bold text-gray-800">Now & Fast</span>
+              </div>
+
+              <button onClick={closeMenu} className="text-2xl text-gray-700">
+                <FaTimes />
+              </button>
+            </div>
+
+            {/* Drawer Links */}
+            <ul className="flex flex-col gap-4 p-5 font-medium">
               <li>
-                <button className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">
-                  Enquiry
-                </button>
+                <NavLink to="/" className={navLinkClass} onClick={closeMenu}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className={navLinkClass} onClick={closeMenu}>
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/services"
+                  className={navLinkClass}
+                  onClick={closeMenu}
+                >
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/gallery"
+                  className={navLinkClass}
+                  onClick={closeMenu}
+                >
+                  Gallery
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={navLinkClass}
+                  onClick={closeMenu}
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+
+              {/* CTA Buttons */}
+              <li className="pt-2">
+                <Link
+                  to="/enquiry"
+                  onClick={closeMenu}
+                  className="block w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition text-center"
+                >
+                  Get Quote
+                </Link>
+              </li>
+
+              <li>
+                <a
+                  href="tel:+917770862216"
+                  onClick={closeMenu}
+                  className="block w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-800 transition text-center"
+                >
+                  Call Now
+                </a>
               </li>
             </ul>
           </div>
-        )}
+        </div>
       </nav>
     </>
   );
