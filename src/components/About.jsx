@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import aboutImg from "../assets/Hero-img.png";
 // agar image nahi hai, to temporary Unsplash URL use kar sakte ho
 
@@ -46,8 +47,11 @@ const About = () => {
             </p>
 
             <button className="bg-orange-500 text-white px-5 py-2 mt-4 rounded hover:bg-orange-600">
+              {/* <NavLink to="/about"> Know More </Navlink>    */}
+              <NavLink to="/about">
                 Know More
-              </button>
+              </NavLink>
+            </button>
           </div>
 
         </div>

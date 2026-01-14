@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-sm">Need Help?</p>
-                <p className="text-white font-semibold">+91 99999 99999</p>
+                <p className="text-white font-semibold">+91 7770862216</p>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ const Footer = () => {
 
             <div className="flex gap-3 text-md mb-3">
               <FaPhoneAlt className="text-orange-500" />
-              <p>+91 99999 99999</p>
+              <p>+91 7770862216</p>
             </div>
 
             <div className="flex gap-3 text-md">
