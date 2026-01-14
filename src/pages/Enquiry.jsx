@@ -53,7 +53,7 @@ const Enquiry = () => {
           </div>
 
           {/* FORM */}
-          <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+          {/* <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
             <form className="space-y-4">
               <input
                 type="text"
@@ -104,6 +104,53 @@ const Enquiry = () => {
                 className="w-full bg-orange-500 text-white py-3 rounded-md font-medium hover:bg-orange-600 transition"
               >
                 Submit Enquiry
+              </button>
+            </form>
+          </div> */}
+
+          <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md">
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              />
+
+              <input
+                type="tel"
+                placeholder="Mobile Number"
+                className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              />
+
+              <input
+                type="text"
+                placeholder="From City"
+                className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              />
+
+              <input
+                type="text"
+                placeholder="To City"
+                className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              />
+
+              <textarea
+                rows="4"
+                placeholder="Message"
+                className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              ></textarea>
+
+              <button
+                type="submit"
+                className="w-full bg-orange-500 text-white py-3 rounded-md font-medium hover:bg-orange-600 transition"
+              >
+                Submit Message
               </button>
             </form>
           </div>

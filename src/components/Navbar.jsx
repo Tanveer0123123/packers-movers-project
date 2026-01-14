@@ -10,8 +10,7 @@ const Navbar = () => {
 
 
   const navLinkClass = ({ isActive }) =>
-    `cursor-pointer hover:text-purple-700 transition ${
-      isActive ? "text-purple-700 font-semibold" : "text-gray-700"
+    `cursor-pointer hover:text-purple-700 transition ${isActive ? "text-purple-700 font-semibold" : "text-gray-700"
     }`;
 
   return (
@@ -41,7 +40,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Company Logo" className="w-12 h-12" />
             <span className="text-lg md:text-xl font-bold text-gray-800">
-              Now & Fast Transportation
+              Now And Fast Transportation Packers And Movers
             </span>
           </Link>
 
@@ -95,29 +94,26 @@ const Navbar = () => {
 
         {/* Overlay */}
         <div
-          className={`fixed inset-0 z-50 transition-all duration-300 ${
-            menuOpen ? "visible" : "invisible"
-          }`}
+          className={`fixed inset-0 z-50 transition-all duration-300 ${menuOpen ? "visible" : "invisible"
+            }`}
         >
           {/* background overlay */}
           <div
-            className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
-              menuOpen ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${menuOpen ? "opacity-100" : "opacity-0"
+              }`}
             onClick={closeMenu}
           />
 
           {/* Drawer */}
           <div
-            className={`absolute left-0 top-0 h-full w-[75%] max-w-[320px] bg-white shadow-xl transition-transform duration-300 ${
-              menuOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+            className={`absolute left-0 top-0 h-full w-[75%] max-w-[320px] bg-white shadow-xl transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
           >
             {/* Drawer Header */}
             <div className="flex justify-between items-center p-4 border-b">
               <div className="flex items-center gap-2">
                 <img src={logo} alt="logo" className="w-10 h-10" />
-                <span className="font-bold text-gray-800">Now & Fast</span>
+                <span className="font-bold text-gray-800">Now And Fast Transportation Packers And Movers </span>
               </div>
 
               <button onClick={closeMenu} className="text-2xl text-gray-700">

@@ -2,7 +2,7 @@ const QuoteForm = () => {
   return (
     <>
       {/* QUOTE SECTION */}
-      <section id="quote" className="bg-gray-50 py-12 md:py-16">
+      <section id="quote" className="bg-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
@@ -11,14 +11,35 @@ const QuoteForm = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                 Get Free Quote
               </h2>
-              <p className="mt-3 text-gray-600">
-                Looking for reliable Packers & Movers? Fill the form and get a
-                free moving estimate from our team.
+
+              <p className=" mt-3 text-gray-600 leading-relaxed">
+                Looking for reliable Packers & Movers? Fill the form and get a free moving
+                estimate from our team.
               </p>
 
+              {/* COMPANY DETAILS */}
+              <div className="mt-5 space-y-2 text-gray-700">
+                <p className=" text-2xl font-semibold text-gray-800">
+                  Now & Fast Transportation
+                </p>
+
+                <p>
+                  📞 <span className="font-medium">+91 7770862216</span>
+                </p>
+
+                <p>
+                  📧 <span className="font-medium">info@nowandfasttransportation.com</span>
+                </p>
+
+                <p className=" font-medium leading-relaxed">
+                  📍 Address: Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
+                </p>
+              </div>
+
+              {/* BUTTONS */}
               <div className="mt-6 space-y-3">
                 <a
-                  href="tel:9999999999"
+                  href="tel:+917770862216"
                   className="inline-block bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition"
                 >
                   📞 Call Now
@@ -27,7 +48,7 @@ const QuoteForm = () => {
                 <br />
 
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/917770862216"
                   className="inline-block bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 transition"
                 >
                   💬 WhatsApp Now
@@ -36,7 +57,7 @@ const QuoteForm = () => {
             </div>
 
             {/* FORM */}
-            <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+            <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md">
               <form className="space-y-4">
                 <input
                   type="text"
@@ -47,6 +68,11 @@ const QuoteForm = () => {
                 <input
                   type="tel"
                   placeholder="Mobile Number"
+                  className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
                   className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
                 />
 

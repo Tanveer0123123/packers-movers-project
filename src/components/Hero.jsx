@@ -88,14 +88,14 @@ const Hero = () => {
       {/*  Left / Right Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition"
+        className="hidden md:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition"
       >
         ❮
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition"
+        className="hidden md:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition"
       >
         ❯
       </button>

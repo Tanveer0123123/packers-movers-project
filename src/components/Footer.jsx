@@ -7,6 +7,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import logo from "../assets/Logo-img2.png";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,8 +18,9 @@ const Footer = () => {
 
           {/* COMPANY INFO */}
           <div>
+
             <img src={logo} alt="Company Logo" className="w-24 mb-4" />
-            <p className="text-sm leading-relaxed">
+            <p className="text-md leading-relaxed">
               Now & Fast Transportation provides reliable Packers & Movers
               services with safe packing, fast delivery, and affordable pricing
               across India.
@@ -54,7 +56,7 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">
               Our Services
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-md">
               <li>› Home Shifting</li>
               <li>› Office Relocation</li>
               <li>› Vehicle Transportation</li>
@@ -68,12 +70,36 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">
               Useful Links
             </h3>
-            <ul className="space-y-2 text-sm">
-              <li>› About Us</li>
-              <li>› Our Services</li>
-              <li>› Gallery</li>
-              <li>› Contact Us</li>
-              <li>› Privacy Policy</li>
+            <ul className="space-y-2 text-md">
+              <li>
+                <NavLink to="/about" className="hover:text-orange-400 transition">
+                  › About Us
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/services" className="hover:text-orange-400 transition">
+                  › Our Services
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/gallery" className="hover:text-orange-400 transition">
+                  › Gallery
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/contact" className="hover:text-orange-400 transition">
+                  › Contact Us
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/privacy-policy" className="hover:text-orange-400 transition">
+                  › Privacy Policy
+                </NavLink>
+              </li>
             </ul>
           </div>
 
@@ -83,21 +109,21 @@ const Footer = () => {
               Contact Us
             </h3>
 
-            <div className="flex gap-3 text-sm mb-3">
+            <div className="flex gap-3 text-md mb-3">
               <FaMapMarkerAlt className="text-orange-500 mt-1" />
               <p>
-                C-Sector, Indrapuri, Bhopal, Madhya Pradesh – 462021
+               Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
               </p>
             </div>
 
-            <div className="flex gap-3 text-sm mb-3">
+            <div className="flex gap-3 text-md mb-3">
               <FaPhoneAlt className="text-orange-500" />
               <p>+91 99999 99999</p>
             </div>
 
-            <div className="flex gap-3 text-sm">
+            <div className="flex gap-3 text-md">
               <FaEnvelope className="text-orange-500" />
-              <p>info@nowandfasttransportation.com</p>
+              <p>info@nowandtransportation.com</p>
             </div>
           </div>
 
@@ -105,7 +131,7 @@ const Footer = () => {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="border-t border-gray-700 py-4 text-center text-sm">
+      <div className="border-t border-gray-700 py-4 text-center text-md">
         © {new Date().getFullYear()} Now & Fast Transportation. All Rights Reserved.
       </div>
     </footer>

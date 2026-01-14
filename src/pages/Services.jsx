@@ -1,27 +1,43 @@
-const servicesList = [
+import {
+  FaHome,
+  FaBuilding,
+  FaTruck,
+  FaBoxOpen,
+  FaPeopleCarry,
+  FaWarehouse,
+} from "react-icons/fa";
+
+
+const servicesData = [
   {
+    icon: <FaHome />,
     title: "Home Shifting",
-    desc: "Safe and secure household shifting with professional packing and timely delivery across India.",
+    desc: "Safe and secure household shifting services with professional packing and transportation.",
   },
   {
+    icon: <FaBuilding />,
     title: "Office Relocation",
-    desc: "Efficient office moving services ensuring minimal downtime and maximum safety of equipment.",
+    desc: "Efficient office shifting solutions ensuring minimal downtime and maximum safety.",
   },
   {
+    icon: <FaTruck />,
     title: "Vehicle Transportation",
-    desc: "Reliable car and two-wheeler transportation with proper loading and safety measures.",
+    desc: "Two-wheeler and car transportation services with complete safety and insurance.",
   },
   {
+    icon: <FaBoxOpen />,
     title: "Packing & Unpacking",
-    desc: "High-quality packing materials and expert handling to prevent damage during transit.",
+    desc: "High-quality packing materials and expert packing for damage-free movement.",
   },
   {
+    icon: <FaPeopleCarry />,
     title: "Loading & Unloading",
-    desc: "Trained staff to safely load and unload goods with modern equipment.",
+    desc: "Trained staff for safe loading and unloading of your valuable goods.",
   },
   {
-    title: "Warehousing Services",
-    desc: "Secure and spacious warehousing solutions for short-term and long-term storage.",
+    icon: <FaWarehouse />,
+    title: "Warehousing",
+    desc: "Secure and spacious warehousing solutions for short and long-term storage.",
   },
 ];
 
@@ -40,10 +56,10 @@ const Services = () => {
         </div>
       </section>
 
-      {/* SERVICES CONTENT */}
-      <section className="bg-white py-12 md:py-16">
+      <section className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
 
+          {/* SECTION HEADING */}
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
               Packers & Movers Services
@@ -54,16 +70,20 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesList.map((service, index) => (
+          {/* SERVICES GRID */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {servicesData.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center"
               >
+                <div className="text-purple-700 text-4xl mb-4 flex justify-center">
+                  {service.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                <p className="mt-2 text-gray-600 text-sm">
                   {service.desc}
                 </p>
               </div>
@@ -72,6 +92,7 @@ const Services = () => {
 
         </div>
       </section>
+
 
       {/* CTA STRIP */}
       <section className="bg-orange-500 py-10">

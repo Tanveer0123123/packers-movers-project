@@ -12,7 +12,7 @@ const About = () => {
             <img
               src={aboutImg}
               alt="About Now & Fast Transportation"
-              className="w-full h-[500px] object-cover rounded-lg shadow-md"
+              className="w-full h-[300px] lg:h-[500px] object-cover rounded-lg shadow-md"
             />
           </div>
 
@@ -22,14 +22,14 @@ const About = () => {
               About Now & Fast Transportation
             </h2>
 
-            <p className="mt-4 text-base text-gray-600 leading-relaxed">
+            <p className=" text-start mt-4 text-base text-gray-600 leading-relaxed">
               Now & Fast Transportation is a trusted name in Packers and Movers
               services, offering safe, reliable, and affordable relocation
               solutions. With experienced staff and modern transportation
               facilities, we ensure your household and office goods are packed
               and delivered with complete care and professionalism.
             </p>
-             <p className="mt-4 text-base text-gray-600 leading-relaxed">
+             <p className=" text-start mt-4 text-base text-gray-600 leading-relaxed">
               Now & Fast Transportation is a trusted name in Packers and Movers
               services, offering safe, reliable, and affordable relocation
               solutions. With experienced staff and modern transportation
@@ -37,7 +37,7 @@ const About = () => {
               and delivered with complete care and professionalism.
             </p>
 
-             <p className="mt-4 text-base text-gray-600 leading-relaxed">
+             <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
               Now & Fast Transportation is a trusted name in Packers and Movers
               services, offering safe, reliable, and affordable relocation
               solutions. With experienced staff and modern transportation

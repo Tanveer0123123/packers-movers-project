@@ -62,12 +62,29 @@ const Contact = () => {
 
             <div>
               <h2 className="text-3xl font-bold text-gray-800">
-                Get In Touch
+                 Get Free Quote
               </h2>
               <p className="mt-3 text-gray-600">
-                Have questions or need a moving quote? Fill the form and our
-                team will contact you shortly.
+                Looking for reliable Packers & Movers? Fill the form and get a free moving
+                estimate from our team.
               </p>
+              <div className="mt-5 space-y-2 text-gray-700">
+                <p className=" text-2xl font-semibold text-gray-800">
+                  Now & Fast Transportation
+                </p>
+
+                <p>
+                  📞 <span className="font-medium">+91 7770862216</span>
+                </p>
+
+                <p>
+                  📧 <span className="font-medium">info@nowandfasttransportation.com</span>
+                </p>
+
+                <p className=" font-medium leading-relaxed">
+                  📍 Address: Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
+                </p>
+              </div>
 
               <div className="mt-6 space-y-3">
                 <a
@@ -97,6 +114,12 @@ const Contact = () => {
                 <input
                   type="tel"
                   placeholder="Mobile Number"
+                  className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+                />
+
+                 <input
+                  type="email"
+                  placeholder="Email"
                   className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
                 />
 
