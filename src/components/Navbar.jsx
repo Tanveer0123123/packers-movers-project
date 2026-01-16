@@ -28,7 +28,7 @@ const Navbar = () => {
             <span>+91 7770862216</span>
           </div>
           <div>
-            <span className="font-semibold">GST:</span> 27XXXXXXXXX
+            <span className="font-semibold">GST:</span> 23EFGPR6923L1ZZ
           </div>
         </div>
       </div>
@@ -62,23 +62,23 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/gallery" className={navLinkClass}>
-                Gallery
+              <NavLink to="/tour-travels" className={navLinkClass}>
+                Tour & Travels
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className={navLinkClass}>
-                Contact Us
+              <NavLink to="/gallery" className={navLinkClass}>
+                Gallery
               </NavLink>
             </li>
 
             {/* Better CTA button */}
             <li>
               <Link
-                to="/enquiry"
+                to="/contactus"
                 className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600 transition"
               >
-                Get Quote
+                Contact Us
               </Link>
             </li>
           </ul>
@@ -142,6 +142,17 @@ const Navbar = () => {
                   Services
                 </NavLink>
               </li>
+
+              <li>
+                <NavLink
+                  to="/tour-travels"
+                  className={navLinkClass}
+                  onClick={closeMenu}
+                >
+                  Tour & Travels
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
                   to="/gallery"
@@ -151,24 +162,15 @@ const Navbar = () => {
                   Gallery
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  className={navLinkClass}
-                  onClick={closeMenu}
-                >
-                  Contact Us
-                </NavLink>
-              </li>
 
               {/* CTA Buttons */}
               <li className="pt-2">
                 <Link
-                  to="/enquiry"
+                  to="/contactus"
                   onClick={closeMenu}
                   className="block w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition text-center"
                 >
-                  Get Quote
+                  Contact Us
                 </Link>
               </li>
 

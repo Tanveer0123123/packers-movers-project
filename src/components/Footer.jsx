@@ -58,6 +58,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-md">
               <li>› Home Shifting</li>
+              <li>› Tour And Travels</li>
               <li>› Office Relocation</li>
               <li>› Vehicle Transportation</li>
               <li>› Packing & Unpacking</li>
@@ -82,6 +83,11 @@ const Footer = () => {
                   › Our Services
                 </NavLink>
               </li>
+                <li>
+                <NavLink to="/tour-travels" className="hover:text-orange-400 transition">
+                  › Tour & Travels
+                </NavLink>
+              </li>
 
               <li>
                 <NavLink to="/gallery" className="hover:text-orange-400 transition">
@@ -90,7 +96,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <NavLink to="/contact" className="hover:text-orange-400 transition">
+                <NavLink to="/contactus" className="hover:text-orange-400 transition">
                   › Contact Us
                 </NavLink>
               </li>

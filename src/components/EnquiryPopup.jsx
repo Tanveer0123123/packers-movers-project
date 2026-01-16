@@ -3,6 +3,19 @@ import { useEffect, useState } from "react";
 const EnquiryPopup = () => {
   const [show, setShow] = useState(false);
 
+  // ✅ Form State (Always top)
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    fromCity: "",
+    toCity: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  // ✅ Popup Timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true);
@@ -13,13 +26,84 @@ const EnquiryPopup = () => {
 
   const closePopup = () => setShow(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // yaha tum API call 
-    alert("Enquiry Submitted ✅");
-    setShow(false); // submit ke baad popup band
+  // ✅ Change Handler
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
+  // ✅ Submit Handler (Email + WhatsApp)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // ✅ Basic validation
+    if (!formData.name || !formData.phone) {
+      alert("Please enter your Name and Mobile Number.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // ✅ 1) Send Email via Web3Forms
+      const payload = {
+        access_key: "44b1597a-8e56-4730-82aa-34eaee3b0f0f",
+        subject: "New Enquiry - Now & Fast Transportation",
+        from_name: "Website Contact Form",
+        ...formData,
+      };
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!data.success) {
+        alert("Email sending failed. Please try again!");
+        return;
+      }
+
+      // ✅ 2) WhatsApp open with enquiry details
+      const whatsappNumber = "8084410021"; // without +91
+
+      const text = `*New Website Enquiry*%0A
+Name: ${formData.name}%0A
+Phone: ${formData.phone}%0A
+Email: ${formData.email}%0A
+From City: ${formData.fromCity}%0A
+To City: ${formData.toCity}%0A
+Message: ${formData.message}`;
+
+      window.open(`https://wa.me/91${whatsappNumber}?text=${text}`, "_blank");
+
+      alert("Enquiry submitted successfully!");
+
+      // ✅ Clear form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        fromCity: "",
+        toCity: "",
+        message: "",
+      });
+
+      // ✅ Close popup after submit
+      setShow(false);
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong. Please try again!");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // ✅ Return null after all hooks
   if (!show) return null;
 
   return (
@@ -27,10 +111,10 @@ const EnquiryPopup = () => {
       {/* Modal Box */}
       <div
         className="
-      relative w-full max-w-lg bg-white rounded-xl shadow-2xl 
-      p-6 md:p-8 animate-fadeIn
-      max-h-[90vh] overflow-y-auto
-    "
+          relative w-full max-w-lg bg-white rounded-xl shadow-2xl 
+          p-6 md:p-8 animate-fadeIn
+          max-h-[90vh] overflow-y-auto
+        "
       >
         {/* Close Button */}
         <button
@@ -50,55 +134,73 @@ const EnquiryPopup = () => {
           <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
+              value={formData.name}
+              onChange={handleChange}
               required
             />
 
             <input
               type="tel"
+              name="phone"
               placeholder="Mobile Number"
+              value={formData.phone}
+              onChange={handleChange}
               className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
               required
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
             />
 
             <input
               type="text"
+              name="fromCity"
               placeholder="From City"
+              value={formData.fromCity}
+              onChange={handleChange}
               className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
               required
             />
 
             <input
               type="text"
+              name="toCity"
               placeholder="To City"
+              value={formData.toCity}
+              onChange={handleChange}
               className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
               required
             />
 
             <textarea
               rows="4"
+              name="message"
               placeholder="Message (Optional)"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-purple-700"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full bg-orange-500 text-white py-3 rounded-md font-medium hover:bg-orange-600 transition"
+              disabled={loading}
+              className="w-full bg-orange-500 text-white py-3 rounded-md font-medium hover:bg-orange-600 transition disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Submit Enquiry
+              {loading ? "Submitting..." : "Submit Message"}
             </button>
           </form>
         </div>
       </div>
     </div>
-
   );
 };
 

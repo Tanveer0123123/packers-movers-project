@@ -2,7 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhyChooseUs from "../components/WhyChooseUs";
 import StatsCounter from "../components/StatsCounter";
-import aboutImg from "../assets/Hero-img.png";
+import aboutImg from "../assets/goods-3.jpeg";
+import aboutImg2 from "../assets/goods-4.jpeg";
 
 const About = () => {
   return (
@@ -28,39 +29,52 @@ const About = () => {
               <img
                 src={aboutImg}
                 alt="About Now & Fast Transportation"
-                className="w-full h-[300px] lg:h-[500px] object-cover rounded-lg shadow-md"
+                className="w-full h-screen object-cover rounded-lg shadow-md"
               />
             </div>
 
             {/* RIGHT: CONTENT */}
             <div className="text-center md:text-left">
-              <h2 className=" text-3xl md:text-4xl font-bold text-gray-800">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                 About Now & Fast Transportation
               </h2>
 
               <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
-                Now & Fast Transportation is a trusted name in Packers and Movers
-                services, offering safe, reliable, and affordable relocation
-                solutions. With experienced staff and modern transportation
-                facilities, we ensure your household and office goods are packed
-                and delivered with complete care and professionalism.
-              </p>
-              <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
-                Now & Fast Transportation is a trusted name in Packers and Movers
-                services, offering safe, reliable, and affordable relocation
-                solutions. With experienced staff and modern transportation
-                facilities, we ensure your household and office goods are packed
-                and delivered with complete care and professionalism.
+                Now & Fast Transportation is a reliable and customer-focused Packers & Movers
+                service provider, known for safe shifting, timely delivery, and affordable
+                pricing. We help families and businesses relocate smoothly with complete
+                packing, loading, transportation, and unpacking support.
               </p>
 
               <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
-                Now & Fast Transportation is a trusted name in Packers and Movers
-                services, offering safe, reliable, and affordable relocation
-                solutions. With experienced staff and modern transportation
-                facilities, we ensure your household and office goods are packed
-                and delivered with complete care and professionalism.
+                Our experienced team uses high-quality packing materials and modern tools to
+                ensure your goods remain fully protected during transit. Whether it's home
+                shifting, office relocation, vehicle transportation, or warehouse moving —
+                we handle every step with professional care and responsibility.
+              </p>
+
+              <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
+                We provide local shifting as well as intercity and outstation relocation
+                services. With a strong focus on safety, transparency, and customer
+                satisfaction, our aim is to deliver stress-free moving experience from start
+                to finish.
+              </p>
+
+              <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
+                Our goal is simple — to make shifting easy and worry-free for every customer.
+                From careful packing to safe loading and secure delivery, we follow a planned
+                process to ensure your goods reach on time and in perfect condition.
+              </p>
+
+              <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
+                We understand that every move is different. That’s why we offer customized
+                relocation solutions depending on your needs, location, and budget. Our team
+                guides you at every step and keeps everything transparent — no hidden charges,
+                no confusion.
               </p>
             </div>
+
+
 
           </div>
         </div>
@@ -103,7 +117,7 @@ const About = () => {
           {/* IMAGE */}
           <div>
             <img
-              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758"
+              src={aboutImg2}
               alt="About Packers and Movers"
               className="rounded-lg shadow-md w-full"
             />
