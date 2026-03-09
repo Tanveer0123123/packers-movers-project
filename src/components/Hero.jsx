@@ -45,7 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center">
+    <section className="relative h-[74vh] md:h-[80vh] lg:h-screen overflow-hidden flex items-center">
       {/* Background Images (best quality) */}
       {slides.map((slide, index) => (
         <img
