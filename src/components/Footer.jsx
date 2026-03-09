@@ -5,6 +5,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaAngleRight
 } from "react-icons/fa";
 import logo from "../assets/Logo-img2.png";
 import { NavLink } from "react-router-dom";
@@ -18,11 +19,11 @@ const Footer = () => {
 
           {/* COMPANY INFO */}
           <div>
-
             <img src={logo} alt="Company Logo" className="w-24 mb-4" />
+
             <p className="text-md leading-relaxed">
               Now & Fast Transportation provides reliable Packers & Movers
-              services with safe packing, fast delivery, and affordable pricing
+              services with safe packing, fast delivery and affordable pricing
               across India.
             </p>
 
@@ -31,9 +32,11 @@ const Footer = () => {
               <a className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-600 hover:bg-orange-500 hover:border-orange-500 transition">
                 <FaFacebookF />
               </a>
+
               <a className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-600 hover:bg-orange-500 hover:border-orange-500 transition">
                 <FaInstagram />
               </a>
+
               <a className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-600 hover:bg-orange-500 hover:border-orange-500 transition">
                 <FaLinkedinIn />
               </a>
@@ -44,9 +47,15 @@ const Footer = () => {
               <div className="w-10 h-10 bg-orange-500 flex items-center justify-center rounded-full text-white">
                 <FaPhoneAlt />
               </div>
+
               <div>
                 <p className="text-sm">Need Help?</p>
-                <p className="text-white font-semibold">+91 7770862216</p>
+                <a
+                  href="tel:+917770862216"
+                  className="text-white font-semibold hover:text-orange-400"
+                >
+                  +91 7770862216
+                </a>
               </div>
             </div>
           </div>
@@ -56,13 +65,37 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">
               Our Services
             </h3>
+
             <ul className="space-y-2 text-md">
-              <li>› Home Shifting</li>
-              <li>› Tour And Travels</li>
-              <li>› Office Relocation</li>
-              <li>› Vehicle Transportation</li>
-              <li>› Packing & Unpacking</li>
-              <li>› Warehousing Services</li>
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
+                Home Shifting
+              </li>
+
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
+                Tour & Travels
+              </li>
+
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
+                Office Relocation
+              </li>
+
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
+                Vehicle Transportation
+              </li>
+
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
+                Packing & Unpacking
+              </li>
+
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
+                Warehousing Services
+              </li>
             </ul>
           </div>
 
@@ -71,39 +104,47 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">
               Useful Links
             </h3>
+
             <ul className="space-y-2 text-md">
-              <li>
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
                 <NavLink to="/about" className="hover:text-orange-400 transition">
-                  › About Us
+                  About Us
                 </NavLink>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
                 <NavLink to="/services" className="hover:text-orange-400 transition">
-                  › Our Services
+                  Our Services
                 </NavLink>
               </li>
-              <li>
+
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
                 <NavLink to="/tour-travels" className="hover:text-orange-400 transition">
-                  › Tour & Travels
+                  Tour & Travels
                 </NavLink>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
                 <NavLink to="/gallery" className="hover:text-orange-400 transition">
-                  › Gallery
+                  Gallery
                 </NavLink>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
                 <NavLink to="/contactus" className="hover:text-orange-400 transition">
-                  › Contact Us
+                  Contact Us
                 </NavLink>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+                <FaAngleRight className="text-orange-500 text-sm" />
                 <NavLink to="/privacy-policy" className="hover:text-orange-400 transition">
-                  › Privacy Policy
+                  Privacy Policy
                 </NavLink>
               </li>
             </ul>
@@ -127,20 +168,32 @@ const Footer = () => {
             <div className="flex gap-3 text-md mb-3">
               <FaMapMarkerAlt className="text-orange-500 mt-1" />
               <p>
-                Shop No.2, House No.29, Balaji Lake City,
-                Lamhakheda Karond, Bhopal - 462038 (Near Harsh Transport),  india.
+                Shop No.2, House No.29, Balaji Lake City, Lamhakheda Karond,
+                Bhopal - 462038 (Near Harsh Transport), India
               </p>
             </div>
 
+            {/* Phone */}
             <div className="flex gap-3 text-md mb-3">
               <FaPhoneAlt className="text-orange-500" />
-              <p>+91 7770862216</p>
+              <a
+                href="tel:+917770862216"
+                className="hover:text-orange-400"
+              >
+                +91 7770862216
+              </a>
             </div>
 
+            {/* Email */}
             <div className="flex gap-3 text-md">
               <FaEnvelope className="text-orange-500" />
-              <p>nandfttransportationpandm@
-                gmail.com</p>
+              <a
+                href="mailto:nandfttransportationpandm@gmail.com"
+                className="hover:text-orange-400"
+              >
+                nandfttransportationpandm
+                @gmail.com
+              </a>
             </div>
           </div>
 
