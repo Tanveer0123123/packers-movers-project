@@ -83,7 +83,7 @@ const Footer = () => {
                   › Our Services
                 </NavLink>
               </li>
-                <li>
+              <li>
                 <NavLink to="/tour-travels" className="hover:text-orange-400 transition">
                   › Tour & Travels
                 </NavLink>
@@ -115,10 +115,20 @@ const Footer = () => {
               Contact Us
             </h3>
 
+            {/* Branch 1 */}
             <div className="flex gap-3 text-md mb-3">
               <FaMapMarkerAlt className="text-orange-500 mt-1" />
               <p>
-               Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
+                Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
+              </p>
+            </div>
+
+            {/* Branch 2 */}
+            <div className="flex gap-3 text-md mb-3">
+              <FaMapMarkerAlt className="text-orange-500 mt-1" />
+              <p>
+                Shop No.2, House No.29, Balaji Lake City,
+                Lamhakheda Karond, Bhopal - 462038 (Near Harsh Transport),  india.
               </p>
             </div>
 
@@ -129,7 +139,8 @@ const Footer = () => {
 
             <div className="flex gap-3 text-md">
               <FaEnvelope className="text-orange-500" />
-              <p>info@nowandtransportation.com</p>
+              <p>nandfttransportationpandm@
+                gmail.com</p>
             </div>
           </div>
 

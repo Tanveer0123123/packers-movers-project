@@ -1,9 +1,10 @@
+import { useState } from "react";
 import taxiImg from "../assets/t-s-texi.png";
 import familyImg from "../assets/t-s-family.jpg";
 import corporateImg from "../assets/t-s-corporate.jpg";
 import religiousImg from "../assets/t-s-religious.jfif";
 import airportImg from "../assets/t-s-airpote.jpg";
-import customImg from "../assets/t-s-coustomized.jfif"
+import customImg from "../assets/t-s-coustomized.jfif";
 import { Link } from "react-router-dom";
 
 const tourServices = [
@@ -45,63 +46,91 @@ const tourServices = [
   },
 ];
 
-
 const TourServices = () => {
+
+  const [showAll, setShowAll] = useState(false);
+
   return (
-    <>
-      {/* SERVICES GRID */}
-      <section className="bg-gray-50 py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              Our Tour & Travel Services
-            </h2>
-            <p className="mt-3 text-gray-600">
-              We offer a wide range of travel services designed to meet different
-              travel needs with comfort and safety.
-            </p>
-          </div>
+    <section className="bg-gray-50 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
 
-          {/* Cards */}
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tourServices.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
-              >
-                {/*  IMAGE TOP */}
-                <div className="w-full h-48 overflow-hidden">
-                  <img
-                    src={service.img}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                </div>
-
-                {/*  TEXT BOTTOM */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-800">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-gray-600 text-sm leading-relaxed">
-                    {service.desc}
-                  </p>
-
-                  {/* Optional Button */}
-                  <Link
-                    to={`/tour-services/${service.slug}`}
-                    className="inline-block mt-5 px-5 py-2 text-sm font-semibold bg-purple-700 text-white rounded-full hover:bg-purple-800 transition"
-                  >
-                    Know More
-                  </Link>
-
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Heading */}
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+            Our Tour & Travel Services
+          </h2>
+          <p className="mt-3 text-gray-600">
+            We offer a wide range of travel services designed to meet different
+            travel needs with comfort and safety.
+          </p>
         </div>
-      </section>
-    </>
+
+        {/* Cards */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {tourServices.map((service, index) => {
+
+            if (!showAll && index > 2) {
+              return (
+                <div key={index} className="hidden lg:block">
+                  <TourCard service={service} />
+                </div>
+              );
+            }
+
+            return <TourCard key={index} service={service} />;
+          })}
+
+        </div>
+
+        {/* Mobile View More Button */}
+        {!showAll && (
+          <div className="text-center mt-8 lg:hidden">
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-6 py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition"
+            >
+              View More Services
+            </button>
+          </div>
+        )}
+
+      </div>
+    </section>
+  );
+};
+
+const TourCard = ({ service }) => {
+  return (
+    <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+
+      <div className="w-full h-48 overflow-hidden">
+        <img
+          src={service.img}
+          alt={service.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        />
+      </div>
+
+      <div className="p-6 text-center">
+        <h3 className="text-xl font-bold text-gray-800">
+          {service.title}
+        </h3>
+
+        <p className="mt-2 text-gray-600 text-sm leading-relaxed">
+          {service.desc}
+        </p>
+
+        <Link
+          to={`/tour-services/${service.slug}`}
+          className="inline-block mt-5 px-5 py-2 text-sm font-semibold bg-purple-700 text-white rounded-full hover:bg-purple-800 transition"
+        >
+          Know More
+        </Link>
+
+      </div>
+
+    </div>
   );
 };
 

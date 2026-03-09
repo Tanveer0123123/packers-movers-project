@@ -10,35 +10,54 @@ const servicesData = [
   {
     img: homeImg,
     title: "Home Shifting",
-    desc: "Safe and secure household shifting services with professional packing and transportation.",
+    desc: "Safe household shifting services with professional packing, loading, transportation and unloading support for a stress-free relocation.",
   },
   {
     img: officeImg,
     title: "Office Relocation",
-    desc: "Efficient office shifting solutions ensuring minimal downtime and maximum safety.",
+    desc: "Professional office shifting solutions ensuring safe movement of office furniture, documents and equipment with minimal downtime.",
   },
   {
     img: tourTravels,
     title: "Tour & Travels",
-    desc: "Reliable tour and travel services for comfortable, safe, and hassle-free journeys.",
+    desc: "Comfortable tour and travel services including local taxi, outstation trips and customized travel packages.",
   },
+
   {
     img: vehicleImg,
-    title: "Vehicle Transportation",
-    desc: "Two-wheeler and car transportation services with complete safety and insurance.",
+    title: "Daily Loading Vehicle",
+    desc: "Loading vehicles available on daily basis for goods delivery, shop material transport and construction material transport.",
   },
+
+  {
+    img: vehicleImg,
+    title: "Monthly Contract Vehicle",
+    desc: "Vehicles available on monthly contract for company transportation, warehouse supply delivery and regular goods movement.",
+  },
+
+  {
+    img: vehicleImg,
+    title: "Part Load Transport",
+    desc: "Affordable transport service for small goods shifting where customers share the vehicle space.",
+  },
+
+  {
+    img: vehicleImg,
+    title: "Full Load Transport",
+    desc: "Complete truck transport service for bulk goods transportation with safe and reliable delivery.",
+  },
+
   {
     img: packingImg,
     title: "Packing & Unpacking",
-    desc: "High-quality packing materials and expert packing for damage-free movement.",
+    desc: "High quality packing materials and expert packing services to ensure safe transportation of goods.",
   },
+
   {
     img: loadingImg,
     title: "Loading & Unloading",
-    desc: "Trained staff for safe loading and unloading of your valuable goods.",
+    desc: "Experienced staff for safe loading and unloading of goods using proper handling techniques.",
   },
-
-
 ];
 
 const Services = () => {

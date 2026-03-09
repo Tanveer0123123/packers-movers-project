@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="bg-purple-800 text-white text-sm px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
         <div className="flex items-center gap-2">
           <FaEnvelope />
-          <span>info@nowandfasttransportation.com</span>
+          <span>nandfttransportationpandm@gmail.com</span>
         </div>
 
         <div className="flex items-center gap-4">

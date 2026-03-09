@@ -13,14 +13,14 @@ const About = () => {
             <img
               src={aboutImg}
               alt="About Now & Fast Transportation"
-              className="w-full h-screen object-cover rounded-lg shadow-md"
+              className="w-full h-[400px] md:h-[500px] object-fill rounded-lg shadow-md"
             />
           </div>
 
           {/* RIGHT: CONTENT */}
-          <div className="text-center md:text-left">
+          <div className="text-start md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              About Now & Fast Transportation
+              About NF Transportation
             </h2>
 
             <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
@@ -43,12 +43,12 @@ const About = () => {
               satisfaction, our aim is to deliver stress-free moving experience from start
               to finish.
             </p>
-            <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
+            {/* <p className="text-start mt-4 text-base text-gray-600 leading-relaxed">
                 We understand that every move is different. That’s why we offer customized
                 relocation solutions depending on your needs, location, and budget. Our team
                 guides you at every step and keeps everything transparent — no hidden charges,
                 no confusion.
-              </p>
+              </p> */}
 
 
             <button className="bg-orange-500 text-white px-5 py-2 mt-4 rounded hover:bg-orange-600">

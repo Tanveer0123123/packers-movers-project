@@ -117,12 +117,18 @@ const QuoteForm = () => {
                 </p>
 
                 <p>
-                  📧 <span className="font-medium">info@nowandfasttransportation.com</span>
+                  📧 <span className="font-medium">nandfttransportationpandm@gmail.com</span>
                 </p>
 
                 <p className=" font-medium leading-relaxed">
                   📍 Address: Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
                 </p>
+                <p className=" font-medium leading-relaxed">
+                  📍 Address:  Shop No.2, House No.29, Balaji Lake City,
+                Lamhakheda Karond, Bhopal - 462038 (Near Harsh Transport), India,
+                </p>
+              
+               
               </div>
 
               {/* BUTTONS */}

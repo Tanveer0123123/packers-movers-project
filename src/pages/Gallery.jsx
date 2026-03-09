@@ -15,6 +15,18 @@ import img14 from "../assets/goods-14.jpeg";
 import img15 from "../assets/goods-15.jpeg";
 import img16 from "../assets/goods-16.jpeg";
 import img17 from "../assets/goods-17.jpeg";
+import img18 from "../assets/goods-18.jpeg";
+import img19 from "../assets/goods-19.jpeg";
+import img20 from "../assets/goods-20.jpeg";
+import img21 from "../assets/goods-21.jpeg";
+import img22 from "../assets/goods-22.jpeg";
+import img23 from "../assets/goods-23.jpeg";
+import img24 from "../assets/goods-24.jpeg";
+import img25 from "../assets/goods-25.jpeg";
+import img26 from "../assets/goods-26.jpeg";
+import img27 from "../assets/goods-27.jpeg";
+import img29 from "../assets/goods-29.jpeg";
+import img30 from "../assets/goods-30.jpeg";
 
 
 const galleryImages = [
@@ -35,6 +47,18 @@ const galleryImages = [
   img15,
   img16,
   img17,
+  img18,
+  img19,
+  img20,
+  img21,
+  img22,
+  img23,
+  img24,
+  img25,
+  img26,
+  img27,
+  img29,
+  img30,
 ];
 
 const Gallery = () => {

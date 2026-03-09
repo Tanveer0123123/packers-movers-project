@@ -5,12 +5,20 @@ import hero2 from "../assets/Hero-img.png";
 const slides = [
   {
     image: hero1,
-    title: "Now & Fast Transportation",
+    title: (
+      <>
+        Now & Fast <span className="text-purple-800">Transportation</span>
+      </>
+    ),
     subtitle: "Packers & Movers | Safe • Fast • Affordable Moving Solutions",
   },
   {
     image: hero2,
-    title: "Reliable Packing & Moving Services",
+    title: (
+      <>
+        Reliable <span className="text-purple-800">Packing & Moving</span> Services
+      </>
+    ),
     subtitle: "House Shifting • Office Relocation • Vehicle Transport",
   },
 ];
@@ -44,9 +52,8 @@ const Hero = () => {
           key={index}
           src={slide.image}
           alt={`Hero ${index + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         />
       ))}
 
@@ -106,9 +113,8 @@ const Hero = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition ${
-              index === currentSlide ? "bg-white" : "bg-white/40"
-            }`}
+            className={`w-3 h-3 rounded-full transition ${index === currentSlide ? "bg-white" : "bg-white/40"
+              }`}
           ></button>
         ))}
       </div>
