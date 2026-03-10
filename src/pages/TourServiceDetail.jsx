@@ -1,5 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { tourServicesDetails } from "../data/tourServicesDetails";
+import { Helmet } from "react-helmet-async";
+
 
 const TourServiceDetail = () => {
   const { slug } = useParams();
@@ -21,8 +23,19 @@ const TourServiceDetail = () => {
     );
   }
 
+
   return (
     <>
+      <Helmet>
+        <title>
+          {service.title} | Tour & Travel Services in Bhopal
+        </title>
+
+        <meta
+          name="description"
+          content={`${service.title} travel services in Bhopal with professional drivers and comfortable vehicles.`}
+        />
+      </Helmet>
       {/* PAGE HERO */}
       <section className="bg-purple-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
