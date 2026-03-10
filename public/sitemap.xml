@@ -15,6 +15,16 @@
 </url>
 
 <url>
+<loc>https://nowandfasttransport.com/gallery</loc>
+</url>
+
+<url>
+<loc>https://nowandfasttransport.com/contactus</loc>
+</url>
+
+<!-- SERVICES -->
+
+<url>
 <loc>https://nowandfasttransport.com/services/home-shifting</loc>
 </url>
 
@@ -34,12 +44,34 @@
 <loc>https://nowandfasttransport.com/services/full-load-transport</loc>
 </url>
 
+<!-- TOUR SERVICES -->
+
 <url>
-<loc>https://nowandfasttransport.com/gallery</loc>
+<loc>https://nowandfasttransport.com/tour-travels</loc>
 </url>
 
 <url>
-<loc>https://nowandfasttransport.com/contactus</loc>
+<loc>https://nowandfasttransport.com/tour-services/local-outstation-taxi</loc>
+</url>
+
+<url>
+<loc>https://nowandfasttransport.com/tour-services/family-tour-packages</loc>
+</url>
+
+<url>
+<loc>https://nowandfasttransport.com/tour-services/corporate-travel</loc>
+</url>
+
+<url>
+<loc>https://nowandfasttransport.com/tour-services/religious-pilgrimage-tours</loc>
+</url>
+
+<url>
+<loc>https://nowandfasttransport.com/tour-services/airport-pickup-drop</loc>
+</url>
+
+<url>
+<loc>https://nowandfasttransport.com/tour-services/customized-tour-packages</loc>
 </url>
 
 </urlset>

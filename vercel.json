@@ -1,16 +1,8 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/services/(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/tour-services/(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }

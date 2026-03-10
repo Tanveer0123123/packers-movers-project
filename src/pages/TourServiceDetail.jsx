@@ -27,14 +27,16 @@ const TourServiceDetail = () => {
   return (
     <>
       <Helmet>
+
         <title>
           {service.title} | Tour & Travel Services in Bhopal
         </title>
 
         <meta
           name="description"
-          content={`${service.title} travel services in Bhopal with professional drivers and comfortable vehicles.`}
+          content={`${service.title} travel services in Bhopal with professional drivers.`}
         />
+
       </Helmet>
       {/* PAGE HERO */}
       <section className="bg-purple-800 text-white py-16">
