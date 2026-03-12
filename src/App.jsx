@@ -12,11 +12,13 @@ import EnquiryPopup from "./components/EnquiryPopup";
 import TourServices from './pages/TourServices';
 import ServiceDetail from "./pages/ServiceDetail";
 import TourServiceDetail from "./pages/TourServiceDetail";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <>
       <EnquiryPopup />
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
