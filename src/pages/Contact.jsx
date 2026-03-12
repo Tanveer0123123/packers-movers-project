@@ -121,6 +121,7 @@ const Contact = () => {
               <p className="text-gray-600 mt-1">
                 Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.), India
               </p>
+              
             </div>
           </div>
 
@@ -154,6 +155,10 @@ const Contact = () => {
                 <p className=" font-medium leading-relaxed">
                   📍 Address: Anand Nagar & Kokta Transport Nagar, Bhopal (M.P.),
                   India
+                </p>
+                <p className=" font-medium leading-relaxed">
+                  📍 Address:  Shop No.2, House No.29, Balaji Lake City,
+                Lamhakheda Karond, Bhopal - 462038 (Near Harsh Transport), India,
                 </p>
               </div>
 
